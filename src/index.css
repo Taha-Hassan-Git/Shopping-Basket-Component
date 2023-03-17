@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+:root{
+  --shade-1: rgba(0, 0, 0, 0.25);
+  --primary-2: #3F51B5;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.Header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(185, 185, 185);
+}
+.Lockup{
+  display: flex;
+  gap: 1rem
+}
+.AmountIcon{
+  color: white;
+  height: 24px;
+  width: 24px;
+  font-size: 10px;
+  align-self: center;
+  text-align: center;
+  background-color: var(--primary-2);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.logos{
+  font-size: 24px;
+  font-weight: 300;
+}
+.Soon{
+  color: var(--shade-1);
+}
+.BasketContainer{
+  display: flex;
+  flex-direction: column;
+}
+.Basket{
+  display: flex;
+}
+.ProductContainer{
+  width: 50vw;
+}
+.ProductName{
+  font-size: 16px;
+}
+.ProductImage{
+  width: 100%
+}
+.TotalContainer{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.row{
+  display: flex;
+  gap: 1rem;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
