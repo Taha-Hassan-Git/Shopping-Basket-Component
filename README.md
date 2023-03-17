@@ -9,6 +9,8 @@ Meta take the wheel!
 
 ## Assumptions
 I'm assuming that:
+- Since I'm not working with a team, it isn't necessary to make branches for features I'm working on.
+- However my commits should be small, discrete and frequent in order to tell a legible story of the development of the project to my potential employers. (Hello!)
 - I'll need to follow the design as closely as possible and use the exact colors, fonts and assets in the page.
 - The design will none-the-less need to be responsive, so I'll need a layout that's suitable for mobile devices but follows the same design principles.
 - The components I make will need to be reusable, so the data must be passed using props.
