@@ -1,6 +1,6 @@
  const Subtotal = () => {
   return (
-    <div className='Subtotal center'>Subtotal</div>
+    <div className='Subtotal'>Subtotal</div>
   )
 }
 

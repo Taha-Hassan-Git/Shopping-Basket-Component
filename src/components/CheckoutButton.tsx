@@ -1,5 +1,5 @@
 const CheckoutButton = () => {
-  return (<button className="btn CheckoutButton center">Go To Checkout</button>
+  return (<button className="btn CheckoutButton">Go To Checkout</button>
     )
 }
 
