@@ -30,6 +30,10 @@ body{
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+  .Amount{
+    margin: 0;
+    line-height: 24px;
+  }
 
 .logos{
   font-size: 24px;
@@ -68,4 +72,7 @@ body{
 .center{
   margin-left: auto;
   margin-right: auto;
+}
+.align-center{
+  align-self: center;
 }

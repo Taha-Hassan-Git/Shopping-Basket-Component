@@ -1,7 +1,7 @@
 const HeaderAmountIcon = () => {
 const amount = '2';
   return (
-    <div className='AmountIcon'>{amount}</div>
+    <div className='AmountIcon'><p className="Amount">{amount}</p></div>
   )
 }
 
