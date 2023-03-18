@@ -1,7 +1,8 @@
-const ProductTotal = () => {
-  return (
-    <div className='ProductTotal'>£650.00</div>
-  )
+interface Props {
+  CssClass?: string;
 }
+const ProductTotal = ({ CssClass }: Props) => {
+  return <div className={"ProductTotal " + CssClass}>£650.00</div>;
+};
 
-export default ProductTotal
+export default ProductTotal;

@@ -1,9 +1,10 @@
-
 const ProductName = () => {
-  const productName = 'Waxed Cotton Hooded Jacket'
+  const productName = "Waxed Cotton Hooded Jacket";
   return (
-    <h2 className='ProductName'>{productName}</h2>
-  )
-}
+    <div className="ProductNameBox">
+      <h2 className="ProductName">{productName}</h2>
+    </div>
+  );
+};
 
-export default ProductName
+export default ProductName;
