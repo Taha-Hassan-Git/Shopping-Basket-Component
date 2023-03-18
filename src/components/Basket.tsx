@@ -15,15 +15,15 @@ function Basket() {
         {/* ProductPrice/Quantity/Total are rendered in this container on big screens */}
         <div className="ProductContainer">
           <Product />
-          <ProductPrice price="650" CssClass="above-700" />
+          <ProductPrice price="£650.00" CssClass="above-700" />
           <ProductQuantity CssClass="above-700" />
-          <ProductTotal CssClass="above-700" />
+          <ProductTotal total="£1300.00" CssClass="above-700" />
         </div>
         {/* Or in this container on small screens */}
         <div className="below-700 TotalContainer">
-          <ProductPrice price="650" />
+          <ProductPrice price="£650.00" />
           <ProductQuantity />
-          <ProductTotal />
+          <ProductTotal total="£1300.00" />
         </div>
       </main>
       <div className="Checkout">

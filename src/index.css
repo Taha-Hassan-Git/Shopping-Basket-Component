@@ -4,6 +4,7 @@
   --primary-2: #3F51B5;
 }
 body{
+  background-color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -73,6 +74,28 @@ body{
   justify-content: space-evenly;
   align-items: center;
 }
+.btn{
+}
+.Quantity{
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn-quantity{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--primary-2);
+  background-color: white;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
 .Checkout{
   float: right;
   margin-right: 1rem;
@@ -80,7 +103,7 @@ body{
 
 .row{
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 .justify-center{
   justify-content: center;
@@ -99,7 +122,7 @@ body{
 .above-700{
   display: none;
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
   .Header{
     margin-top: 2rem;
     padding-bottom: 0.5rem;
@@ -112,12 +135,11 @@ body{
   .ProductContainer{
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between; 
   }
       /* setting width of children */
       .ProductContainer > div{
-        flex: 1 0 19%;
+        flex: 1 0 14%;
       }
       /*Product overline needs to be left aligned*/
       .ProductContainer *:not(:first-child){
@@ -139,6 +161,15 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
   }
+  .price{
+    margin-top: 66px
+  }
+  .total{
+    margin-top: 66px;
+  }
+  .ProductName{
+    margin-top: 18px;
+  }
   .below-700{
     display: none;
   }
@@ -148,4 +179,12 @@ body{
   .text-align-start{
     text-align: start;
   }
+}
+@media only screen and (max-width: 750px) {
+.Overline{
+  text-align: center;
+}
+.Quantity{
+  gap: 1rem;
+}
 }
