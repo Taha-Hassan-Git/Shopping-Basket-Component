@@ -111,8 +111,11 @@ body{
     justify-content: space-between; 
   }
   .ProductContainer > div{
-    flex: 0 1 19%;
+    flex: 1 0 19%;
     text-align: center;
+  }
+  .product-image-wrapper{
+    display: flex;
   }
   .ProductImage{
     width: auto;

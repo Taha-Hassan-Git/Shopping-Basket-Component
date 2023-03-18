@@ -12,8 +12,10 @@ function Basket() {
       <main className="Basket">
         {/* ProductPrice/Quantity/Total are rendered in this container on big screens */}
         <div className="ProductContainer">
-          <ProductName />
-          <ProductImage />
+          <div className="product-image-wrapper">
+            <ProductName />
+            <ProductImage />
+          </div>
           <ProductPrice price="650" CssClass="above-700" />
           <ProductQuantity CssClass="above-700" />
           <ProductTotal CssClass="above-700" />
