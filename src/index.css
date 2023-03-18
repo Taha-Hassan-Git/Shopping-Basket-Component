@@ -119,6 +119,7 @@ body{
     flex: 1 0 19%;
     text-align: center;
   }
+
   .NameImageWrapper{
     display: flex;
     gap: 3rem;
