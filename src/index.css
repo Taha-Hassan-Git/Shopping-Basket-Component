@@ -48,6 +48,13 @@ body{
 .Basket{
   display: flex;
 }
+.Overline{
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--shade-1);
+}
 .ProductContainer{
   width: 50vw;
 }
@@ -73,6 +80,9 @@ body{
   display: flex;
   gap: 1rem;
 }
+.space-evenly{
+  justify-content: space-evenly;
+}
 .center{
   margin-left: auto;
   margin-right: auto;
@@ -80,13 +90,16 @@ body{
 .align-center{
   align-self: center;
 }
+.text-align-start{
+  text-align: start;
+}
 .below-700{
   display: flex;
 }
 .above-700{
   display: none;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 700px) {
   .Header{
     margin-top: 2rem;
     padding-bottom: 0.5rem;
@@ -94,7 +107,6 @@ body{
   .Basket{
     display: flex;
     justify-content: space-between;
-    gap: 200px;
     margin: 0 auto;
   }
   .ProductContainer{
@@ -104,8 +116,12 @@ body{
     justify-content: space-between; 
   }
   .ProductContainer > div{
-    flex: 0 1 19%;
+    flex: 1 0 19%;
     text-align: center;
+  }
+  .NameImageWrapper{
+    display: flex;
+    gap: 3rem;
   }
   .ProductImage{
     width: auto;
