@@ -90,9 +90,7 @@ body{
 .align-center{
   align-self: center;
 }
-.text-align-start{
-  text-align: start;
-}
+
 .below-700{
   display: flex;
 }
@@ -115,11 +113,14 @@ body{
     flex-direction: row;
     justify-content: space-between; 
   }
-  .ProductContainer > div{
-    flex: 1 0 19%;
-    text-align: center;
-  }
-
+      /* setting width of children */
+      .ProductContainer > div{
+        flex: 1 0 19%;
+      }
+      /*Product overline needs to be left aligned*/
+      .ProductContainer *:not(:first-child){
+        text-align: center;
+      }
   .NameImageWrapper{
     display: flex;
     gap: 3rem;
@@ -137,5 +138,8 @@ body{
   }
   .above-700{
     display: block;
+  }
+  .text-align-start{
+    text-align: start;
   }
 }
