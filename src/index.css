@@ -6,6 +6,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-weight: 300;
   box-sizing: border-box;
   margin: 2rem;
 }
@@ -58,9 +59,10 @@ body{
 .ProductContainer{
   width: 50vw;
 }
-.ProductName{
-  font-size: 16px;
+.ProductNameBox{
+  width: max-content;
 }
+
 .ProductImage{
   width: 100%
 }
@@ -78,10 +80,10 @@ body{
 
 .row{
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
-.space-evenly{
-  justify-content: space-evenly;
+.justify-center{
+  justify-content: center;
 }
 .center{
   margin-left: auto;
@@ -121,6 +123,10 @@ body{
       .ProductContainer *:not(:first-child){
         text-align: center;
       }
+  .Overline{
+    margin-top: 48px;
+    margin-bottom: 48px
+  }
   .NameImageWrapper{
     display: flex;
     gap: 3rem;

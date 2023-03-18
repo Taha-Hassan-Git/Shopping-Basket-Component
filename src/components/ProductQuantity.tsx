@@ -8,7 +8,7 @@ const ProductQuantity = ({ CssClass }: Props) => {
   return (
     <div className={CssClass}>
       <Overline heading="Quantity" />
-      <div className="row space-evenly">
+      <div className="row justify-center">
         <button className="btn btn-quantity minus">-</button>
         {quant}
         <button className="btn btn-quantity plus">+</button>
