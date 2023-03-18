@@ -6,11 +6,13 @@ interface Props {
 const ProductQuantity = ({ CssClass }: Props) => {
   const quant = 0;
   return (
-    <div className={"ProductQuantity row " + CssClass}>
+    <div className={CssClass}>
       <Overline heading="Quantity" />
-      <button className="btn btn-quantity minus">-</button>
-      {quant}
-      <button className="btn btn-quantity plus">+</button>
+      <div className="row space-evenly">
+        <button className="btn btn-quantity minus">-</button>
+        {quant}
+        <button className="btn btn-quantity plus">+</button>
+      </div>
     </div>
   );
 };

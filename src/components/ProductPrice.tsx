@@ -9,7 +9,6 @@ const ProductPrice = ({ price, CssClass }: Props) => {
   return (
     <div className={"ProductPrice " + CssClass}>
       <Overline heading="Price" />
-
       <p className="price">{price}</p>
     </div>
   );

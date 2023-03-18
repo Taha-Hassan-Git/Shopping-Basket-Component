@@ -5,6 +5,8 @@ import ProductQuantity from "./ProductQuantity";
 import ProductTotal from "./ProductTotal";
 import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
+import Overline from "./Overline";
+import Product from "./Product";
 
 function Basket() {
   return (
@@ -12,10 +14,7 @@ function Basket() {
       <main className="Basket">
         {/* ProductPrice/Quantity/Total are rendered in this container on big screens */}
         <div className="ProductContainer">
-          <div className="product-image-wrapper">
-            <ProductName />
-            <ProductImage />
-          </div>
+          <Product />
           <ProductPrice price="650" CssClass="above-700" />
           <ProductQuantity CssClass="above-700" />
           <ProductTotal CssClass="above-700" />

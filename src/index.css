@@ -80,6 +80,9 @@ body{
   display: flex;
   gap: 1rem;
 }
+.space-evenly{
+  justify-content: space-evenly;
+}
 .center{
   margin-left: auto;
   margin-right: auto;
@@ -87,13 +90,16 @@ body{
 .align-center{
   align-self: center;
 }
+.text-align-start{
+  text-align: start;
+}
 .below-700{
   display: flex;
 }
 .above-700{
   display: none;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 700px) {
   .Header{
     margin-top: 2rem;
     padding-bottom: 0.5rem;
@@ -101,7 +107,6 @@ body{
   .Basket{
     display: flex;
     justify-content: space-between;
-    gap: 200px;
     margin: 0 auto;
   }
   .ProductContainer{
@@ -114,8 +119,10 @@ body{
     flex: 1 0 19%;
     text-align: center;
   }
-  .product-image-wrapper{
+
+  .NameImageWrapper{
     display: flex;
+    gap: 3rem;
   }
   .ProductImage{
     width: auto;
