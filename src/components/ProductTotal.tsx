@@ -7,7 +7,7 @@ interface Props {
 const ProductTotal = ({ CssClass, quant }: Props) => {
   return (
     <div className={"ProductTotal " + CssClass}>
-      <Overline heading="Total" />
+      <Overline CssClass="Overline" heading="Total" />
       <p className="total">{`£${quant * 650}.00`}</p>
     </div>
   );

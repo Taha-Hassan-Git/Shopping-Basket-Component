@@ -18,35 +18,46 @@ function Basket({ setQuant, quant }: Props) {
     img: "./src/assets/Jacket.jpg",
     price: 650,
   };
+  const CottonSkirt = {
+    name: "Black Cotton Skirt",
+    img: "./src/assets/CottonSkirt.png",
+    price: 325,
+  };
+
+  const basketItems = [WaxedJacket];
 
   const getSubtotal = () => quant * 650;
+
   return (
     <>
       <main className="Basket">
-        {/* ProductPrice/Quantity/Total are rendered in this container on big screens */}
-        <div className="ProductContainer">
-          <Product
-            name={WaxedJacket.name}
-            img={WaxedJacket.img}
-            quant={quant}
-          />
-          <ProductPrice
-            price={`£${WaxedJacket.price}.00`}
-            CssClass="above-700"
-          />
-          <ProductQuantity
-            quant={quant}
-            setQuant={setQuant}
-            CssClass="above-700"
-          />
-          <ProductTotal quant={quant} CssClass="above-700" />
-        </div>
-        {/* Or in this container on small screens */}
-        <div className="below-700 TotalContainer">
-          <ProductPrice price={`£${WaxedJacket.price}.00`} />
-          <ProductQuantity quant={quant} setQuant={setQuant} />
-          <ProductTotal quant={quant} />
-        </div>
+        {/* CSS classes are used to hide/display components,
+        using above-700 and below-700 classNames.
+        ProductPrice/Quantity/Total are rendered in this container 
+        on big screens */}
+        {basketItems.map((item) => (
+          <div className="row">
+            <div className="ProductContainer">
+              <Product name={item.name} img={item.img} quant={quant} />
+              <ProductPrice
+                quant={quant}
+                price={`£${item.price}.00`}
+                CssClass="above-700"
+              />
+              <ProductQuantity
+                quant={quant}
+                setQuant={setQuant}
+                CssClass="above-700"
+              />
+              <ProductTotal quant={quant} CssClass="above-700" />
+            </div>
+            <div className="below-700 TotalContainer">
+              <ProductPrice quant={quant} price={`£${WaxedJacket.price}.00`} />
+              <ProductQuantity quant={quant} setQuant={setQuant} />
+              <ProductTotal quant={quant} />
+            </div>
+          </div>
+        ))}
       </main>
       <div className="Checkout">
         <Subtotal subtotal={getSubtotal()} />

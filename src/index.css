@@ -52,6 +52,7 @@ body{
 
 .Basket{
   display: flex;
+  flex-direction: column;
   border-bottom: 1px solid rgb(185, 185, 185);
 
 }
@@ -74,6 +75,7 @@ body{
 }
 
 .ProductImage{
+  max-width: 200px;
 }
 .TotalContainer{
   width: 50vw;
@@ -165,6 +167,7 @@ body{
   }
   .Basket{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
   }
@@ -186,6 +189,10 @@ body{
   .Overline{
     margin-top: 48px;
     margin-bottom: 48px
+  }
+  .Overline-subtotal{
+    margin-top: 48px;
+    margin-bottom: 20px;
   }
   .NameImageWrapper{
     display: flex;

@@ -7,7 +7,7 @@ interface Props {
 const Subtotal = ({ subtotal }: Props) => {
   return (
     <div className="Subtotal">
-      <Overline heading="Subtotal:" />
+      <Overline CssClass="Overline Overline-subtotal" heading="Subtotal:" />
       <p className="Subtotal">{`£${subtotal}.00`}</p>
     </div>
   );

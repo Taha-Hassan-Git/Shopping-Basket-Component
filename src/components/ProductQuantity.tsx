@@ -20,7 +20,7 @@ const ProductQuantity = ({ CssClass, setQuant, quant }: Props) => {
 
   return (
     <div className={CssClass}>
-      <Overline heading="Quantity" />
+      <Overline CssClass="Overline" heading="Quantity" />
       <div className="Quantity">
         <button
           onClick={handleDecrease}

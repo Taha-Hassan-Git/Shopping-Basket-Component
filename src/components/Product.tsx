@@ -12,7 +12,7 @@ interface Props {
 const Product = ({ quant, name, img }: Props) => {
   return (
     <div className="text-align-start">
-      <Overline heading="Product" />
+      <Overline CssClass="Overline" heading="Product" />
       <div className="NameImageWrapper">
         <ProductName name={name} quant={quant} />
         <ProductImage img={img} quant={quant} />

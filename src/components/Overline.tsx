@@ -1,9 +1,10 @@
 interface Props {
   heading: string;
+  CssClass: "Overline" | "Overline Overline-subtotal";
 }
 
-const Overline = ({ heading }: Props) => {
-  return <h2 className="Overline">{heading}</h2>;
+const Overline = ({ heading, CssClass }: Props) => {
+  return <h2 className={CssClass}>{heading}</h2>;
 };
 
 export default Overline;
