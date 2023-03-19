@@ -34,6 +34,9 @@ body{
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.AmountIcon--inactive{
+  background-color: var(--shade-1);
+}
   .Amount{
     margin: 0;
     line-height: 24px;
@@ -120,6 +123,10 @@ body{
   -moz-border-radius: 48px;
   -ms-border-radius: 48px;
   -o-border-radius: 48px;
+}
+.CheckoutButton--inactive{
+  background-color: var(--shade-1);
+  color: gray;
 }
 
 .Checkout{

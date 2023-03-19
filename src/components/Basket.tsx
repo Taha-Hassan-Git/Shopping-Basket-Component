@@ -36,7 +36,7 @@ function Basket({ setQuant, quant }: Props) {
       </main>
       <div className="Checkout">
         <Subtotal />
-        <CheckoutButton />
+        <CheckoutButton quant={quant} />
       </div>
     </>
   );
