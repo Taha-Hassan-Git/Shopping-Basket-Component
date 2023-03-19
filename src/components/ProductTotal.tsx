@@ -1,14 +1,14 @@
 import Overline from "./Overline";
 
 interface Props {
-  total: string;
   CssClass?: string;
+  quant: number;
 }
-const ProductTotal = ({ CssClass, total }: Props) => {
+const ProductTotal = ({ CssClass, quant }: Props) => {
   return (
     <div className={"ProductTotal " + CssClass}>
       <Overline heading="Total" />
-      <p className="total">{total}</p>
+      <p className="total">{`£${quant * 650}.00`}</p>
     </div>
   );
 };

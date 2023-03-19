@@ -12,7 +12,14 @@ interface Props {
   quant: number;
 }
 
+const WaxedJacket = {
+  name: "Waxed Cotton Hooded Jacket",
+  img: "./src/assets/Jacket.jpg",
+  price: 650,
+};
+
 function Basket({ setQuant, quant }: Props) {
+  const getSubtotal = () => quant * WaxedJacket.price;
   return (
     <>
       <main className="Basket">
@@ -25,17 +32,17 @@ function Basket({ setQuant, quant }: Props) {
             setQuant={setQuant}
             CssClass="above-700"
           />
-          <ProductTotal total="£1300.00" CssClass="above-700" />
+          <ProductTotal quant={quant} CssClass="above-700" />
         </div>
         {/* Or in this container on small screens */}
         <div className="below-700 TotalContainer">
           <ProductPrice price="£650.00" />
           <ProductQuantity quant={quant} setQuant={setQuant} />
-          <ProductTotal total="£1300.00" />
+          <ProductTotal quant={quant} />
         </div>
       </main>
       <div className="Checkout">
-        <Subtotal />
+        <Subtotal subtotal={getSubtotal()} />
         <CheckoutButton quant={quant} />
       </div>
     </>
