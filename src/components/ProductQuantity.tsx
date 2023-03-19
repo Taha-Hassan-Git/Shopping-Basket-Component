@@ -1,15 +1,21 @@
+import { MouseEvent, useState } from "react";
 import Overline from "./Overline";
 
 interface Props {
   CssClass?: string;
 }
+
 const ProductQuantity = ({ CssClass }: Props) => {
-  const quant = 0;
+  const [quant, setQuant] = useState(0);
+
   return (
     <div className={CssClass}>
       <Overline heading="Quantity" />
       <div className="Quantity">
-        <button className="btn btn-quantity minus">
+        <button
+          onClick={() => setQuant((quant: number) => quant - 1)}
+          className="btn btn-quantity minus"
+        >
           <svg
             width="14"
             height="2"
@@ -21,7 +27,10 @@ const ProductQuantity = ({ CssClass }: Props) => {
           </svg>
         </button>
         <p>{quant}</p>
-        <button className="btn btn-quantity plus">
+        <button
+          onClick={() => setQuant((quant: number) => quant + 1)}
+          className="btn btn-quantity plus"
+        >
           <svg
             width="14"
             height="14"

@@ -83,7 +83,7 @@ body{
 }
 .Quantity{
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -120,6 +120,7 @@ body{
   -ms-border-radius: 48px;
   -o-border-radius: 48px;
 }
+
 .Checkout{
   float: right;
   margin-right: 1rem;
@@ -146,7 +147,7 @@ body{
 .above-700{
   display: none;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 755px) {
   .Header{
     margin-top: 2rem;
     padding-bottom: 0.5rem;
@@ -206,7 +207,7 @@ body{
     text-align: start;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 755px) {
 .Overline{
   text-align: center;
 }

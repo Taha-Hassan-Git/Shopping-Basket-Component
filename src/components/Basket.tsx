@@ -5,7 +5,6 @@ import ProductQuantity from "./ProductQuantity";
 import ProductTotal from "./ProductTotal";
 import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
-import Overline from "./Overline";
 import Product from "./Product";
 
 function Basket() {
