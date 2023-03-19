@@ -7,7 +7,12 @@ import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
 import Product from "./Product";
 
-function Basket() {
+interface Props {
+  setQuant: (quant: number) => void;
+  quant: number;
+}
+
+function Basket({ setQuant, quant }: Props) {
   return (
     <>
       <main className="Basket">
@@ -15,13 +20,17 @@ function Basket() {
         <div className="ProductContainer">
           <Product />
           <ProductPrice price="£650.00" CssClass="above-700" />
-          <ProductQuantity CssClass="above-700" />
+          <ProductQuantity
+            quant={quant}
+            setQuant={setQuant}
+            CssClass="above-700"
+          />
           <ProductTotal total="£1300.00" CssClass="above-700" />
         </div>
         {/* Or in this container on small screens */}
         <div className="below-700 TotalContainer">
           <ProductPrice price="£650.00" />
-          <ProductQuantity />
+          <ProductQuantity quant={quant} setQuant={setQuant} />
           <ProductTotal total="£1300.00" />
         </div>
       </main>

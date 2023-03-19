@@ -3,19 +3,26 @@ import Overline from "./Overline";
 
 interface Props {
   CssClass?: string;
+  quant: number;
+  setQuant: (quant: number) => void;
 }
 
-const ProductQuantity = ({ CssClass }: Props) => {
-  const [quant, setQuant] = useState(0);
+const ProductQuantity = ({ CssClass, setQuant, quant }: Props) => {
+  const handleIncrease = () => {
+    setQuant(quant + 1);
+  };
+
+  const handleDecrease = () => {
+    if (quant > 0) {
+      setQuant(quant - 1);
+    }
+  };
 
   return (
     <div className={CssClass}>
       <Overline heading="Quantity" />
       <div className="Quantity">
-        <button
-          onClick={() => setQuant((quant: number) => quant - 1)}
-          className="btn btn-quantity minus"
-        >
+        <button onClick={handleDecrease} className="btn btn-quantity minus">
           <svg
             width="14"
             height="2"
@@ -27,10 +34,7 @@ const ProductQuantity = ({ CssClass }: Props) => {
           </svg>
         </button>
         <p>{quant}</p>
-        <button
-          onClick={() => setQuant((quant: number) => quant + 1)}
-          className="btn btn-quantity plus"
-        >
+        <button onClick={handleIncrease} className="btn btn-quantity plus">
           <svg
             width="14"
             height="14"

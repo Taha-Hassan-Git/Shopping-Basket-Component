@@ -1,8 +1,12 @@
-const HeaderAmountIcon = () => {
-const amount = '2';
-  return (
-    <div className='AmountIcon'><p className="Amount">{amount}</p></div>
-  )
+interface Props {
+  quant: number;
 }
+const HeaderAmountIcon = ({ quant }: Props) => {
+  return (
+    <div className="AmountIcon">
+      <p className="Amount">{quant}</p>
+    </div>
+  );
+};
 
-export default HeaderAmountIcon
+export default HeaderAmountIcon;
