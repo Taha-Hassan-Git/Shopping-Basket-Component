@@ -5,15 +5,17 @@ import ProductName from "./ProductName";
 
 interface Props {
   quant: number;
+  name: string;
+  img: string;
 }
 
-const Product = ({ quant }: Props) => {
+const Product = ({ quant, name, img }: Props) => {
   return (
     <div className="text-align-start">
       <Overline heading="Product" />
       <div className="NameImageWrapper">
-        <ProductName quant={quant} />
-        <ProductImage quant={quant} />
+        <ProductName name={name} quant={quant} />
+        <ProductImage img={img} quant={quant} />
       </div>
     </div>
   );
