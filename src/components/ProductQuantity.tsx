@@ -22,7 +22,10 @@ const ProductQuantity = ({ CssClass, setQuant, quant }: Props) => {
     <div className={CssClass}>
       <Overline heading="Quantity" />
       <div className="Quantity">
-        <button onClick={handleDecrease} className="btn btn-quantity minus">
+        <button
+          onClick={handleDecrease}
+          className={`btn btn-quantity ${quant === 0 && "opacity-25"}`}
+        >
           <svg
             width="14"
             height="2"

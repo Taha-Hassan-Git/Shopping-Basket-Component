@@ -3,13 +3,17 @@ import Overline from "./Overline";
 import ProductImage from "./ProductImage";
 import ProductName from "./ProductName";
 
-const Product = () => {
+interface Props {
+  quant: number;
+}
+
+const Product = ({ quant }: Props) => {
   return (
     <div className="text-align-start">
       <Overline heading="Product" />
       <div className="NameImageWrapper">
-        <ProductName />
-        <ProductImage />
+        <ProductName quant={quant} />
+        <ProductImage quant={quant} />
       </div>
     </div>
   );

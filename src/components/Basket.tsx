@@ -18,7 +18,7 @@ function Basket({ setQuant, quant }: Props) {
       <main className="Basket">
         {/* ProductPrice/Quantity/Total are rendered in this container on big screens */}
         <div className="ProductContainer">
-          <Product />
+          <Product quant={quant} />
           <ProductPrice price="£650.00" CssClass="above-700" />
           <ProductQuantity
             quant={quant}

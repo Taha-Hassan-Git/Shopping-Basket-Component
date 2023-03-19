@@ -101,6 +101,7 @@ body{
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
 .CheckoutButton{
   display: flex;
   align-items: center;
@@ -146,6 +147,9 @@ body{
 }
 .above-700{
   display: none;
+}
+.opacity-25{
+  opacity: 25%;
 }
 @media only screen and (min-width: 755px) {
   .Header{
