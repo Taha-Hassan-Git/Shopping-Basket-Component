@@ -16,9 +16,19 @@ I'm assuming that:
 - The components I make will need to be reusable, so the data must be passed using props.
 - While in a real-world environment the product details will come from a server via a fetch function, I don't have to implement that in this challenge.
 
-# Process
-
+## Process
+Written before starting the project:
 1. I'll first create a static version of the page, following the style closely and taking a mobile-first approach.
 2. Then I'll use the State Hook, so that the buttons update the DOM.
 3. Next, I'll use props to pass in the data for the page.
 4. Finally, I'll test for accessibility and include aria roles/attributes where necessary.
+
+## Reflections
+
+Written after completing it:
+
+Unfortunately I wasn't able to implement a running total of all the items in the basket. I spent a lot of time refactoring code to use state hooks for tracking item quantity and total number of items.
+
+By the time I got to implementing a running total I realised I should have probably been using a single state for the whole thing: an object that contains the items in the basket and the quantity of each item, which each component could have updated or taken data from.
+
+Ah well, next time!
