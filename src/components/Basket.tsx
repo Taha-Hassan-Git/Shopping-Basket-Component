@@ -6,13 +6,15 @@ import ProductTotal from "./ProductTotal";
 import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
 import Product from "./Product";
+import { useState } from "react";
+import BasketItem from "./BasketItem";
 
 interface Props {
-  setQuant: (quant: number) => void;
-  quant: number;
+  setBasketTotal: (basketTotal: number) => void;
+  basketTotal: number;
 }
 
-function Basket({ setQuant, quant }: Props) {
+function Basket({ setBasketTotal, basketTotal }: Props) {
   const WaxedJacket = {
     name: "Waxed Cotton Hooded Jacket",
     img: "./src/assets/Jacket.jpg",
@@ -24,9 +26,9 @@ function Basket({ setQuant, quant }: Props) {
     price: 325,
   };
 
-  const basketItems = [WaxedJacket];
+  const basketItems = [WaxedJacket, CottonSkirt];
 
-  const getSubtotal = () => quant * 650;
+  const getSubtotal = (number: number) => 300;
 
   return (
     <>
@@ -35,33 +37,18 @@ function Basket({ setQuant, quant }: Props) {
         using above-700 and below-700 classNames.
         ProductPrice/Quantity/Total are rendered in this container 
         on big screens */}
-        {basketItems.map((item) => (
-          <div className="row">
-            <div className="ProductContainer">
-              <Product name={item.name} img={item.img} quant={quant} />
-              <ProductPrice
-                quant={quant}
-                price={`£${item.price}.00`}
-                CssClass="above-700"
-              />
-              <ProductQuantity
-                quant={quant}
-                setQuant={setQuant}
-                CssClass="above-700"
-              />
-              <ProductTotal quant={quant} CssClass="above-700" />
-            </div>
-            <div className="below-700 TotalContainer">
-              <ProductPrice quant={quant} price={`£${WaxedJacket.price}.00`} />
-              <ProductQuantity quant={quant} setQuant={setQuant} />
-              <ProductTotal quant={quant} />
-            </div>
-          </div>
+        {basketItems.map((item, index) => (
+          <BasketItem
+            basketTotal={basketTotal}
+            setBasketTotal={setBasketTotal}
+            item={item}
+            key={index}
+          />
         ))}
       </main>
       <div className="Checkout">
-        <Subtotal subtotal={getSubtotal()} />
-        <CheckoutButton quant={quant} />
+        <Subtotal subtotal={getSubtotal(20)} />
+        <CheckoutButton basketTotal={basketTotal} />
       </div>
     </>
   );

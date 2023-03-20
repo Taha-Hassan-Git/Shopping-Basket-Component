@@ -1,8 +1,9 @@
 interface Props {
-  quant: number;
+  basketTotal: number;
   img: string;
+  quant: number;
 }
-const ProductImage = ({ quant, img }: Props) => {
+const ProductImage = ({ basketTotal, img, quant }: Props) => {
   return (
     <img
       src={img}

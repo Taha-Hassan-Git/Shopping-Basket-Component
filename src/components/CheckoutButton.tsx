@@ -1,12 +1,12 @@
 interface Props {
-  quant: number;
+  basketTotal: number;
 }
 
-const CheckoutButton = ({ quant }: Props) => {
+const CheckoutButton = ({ basketTotal }: Props) => {
   return (
     <button
       className={`btn CheckoutButton ${
-        quant === 0 && "CheckoutButton--inactive"
+        basketTotal === 0 && "CheckoutButton--inactive"
       }`}
     >
       Go To Checkout

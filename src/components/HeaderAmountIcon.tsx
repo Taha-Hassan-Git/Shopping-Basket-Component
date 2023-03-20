@@ -1,10 +1,12 @@
 interface Props {
-  quant: number;
+  basketTotal: number;
 }
-const HeaderAmountIcon = ({ quant }: Props) => {
+const HeaderAmountIcon = ({ basketTotal }: Props) => {
   return (
-    <div className={`AmountIcon ${quant === 0 && "AmountIcon--inactive"}`}>
-      <p className="Amount">{quant}</p>
+    <div
+      className={`AmountIcon ${basketTotal === 0 && "AmountIcon--inactive"}`}
+    >
+      <p className="Amount">{basketTotal}</p>
     </div>
   );
 };

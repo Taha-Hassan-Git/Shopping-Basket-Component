@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Overline from "./Overline";
 import ProductImage from "./ProductImage";
 import ProductName from "./ProductName";
 
 interface Props {
-  quant: number;
+  basketTotal: number;
   name: string;
   img: string;
+  quant: number;
 }
 
-const Product = ({ quant, name, img }: Props) => {
+const Product = ({ basketTotal, name, img, quant }: Props) => {
   return (
     <div className="text-align-start">
       <Overline CssClass="Overline" heading="Product" />
       <div className="NameImageWrapper">
-        <ProductName name={name} quant={quant} />
-        <ProductImage img={img} quant={quant} />
+        <ProductName quant={quant} name={name} basketTotal={basketTotal} />
+        <ProductImage quant={quant} img={img} basketTotal={basketTotal} />
       </div>
     </div>
   );

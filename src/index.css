@@ -53,8 +53,11 @@ body{
 .Basket{
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgb(185, 185, 185);
+  
 
+}
+.BasketItem{
+  border-bottom: 1px solid rgb(185, 185, 185);
 }
 .Overline{
   font-weight: 400;

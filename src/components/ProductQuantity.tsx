@@ -3,18 +3,28 @@ import Overline from "./Overline";
 
 interface Props {
   CssClass?: string;
+  basketTotal: number;
+  setBasketTotal: (basketTotal: number) => void;
   quant: number;
   setQuant: (quant: number) => void;
 }
 
-const ProductQuantity = ({ CssClass, setQuant, quant }: Props) => {
+const ProductQuantity = ({
+  CssClass,
+  setBasketTotal,
+  basketTotal,
+  quant,
+  setQuant,
+}: Props) => {
   const handleIncrease = () => {
     setQuant(quant + 1);
+    setBasketTotal(basketTotal + 1);
   };
 
   const handleDecrease = () => {
     if (quant > 0) {
       setQuant(quant - 1);
+      setBasketTotal(basketTotal - 1);
     }
   };
 

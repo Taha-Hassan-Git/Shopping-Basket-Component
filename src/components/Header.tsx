@@ -3,16 +3,16 @@ import LockUp from "./LockUp";
 import HeaderAmountIcon from "./HeaderAmountIcon";
 
 interface Props {
-  quant: number;
+  basketTotal: number;
 }
 
-function Header({ quant }: Props) {
+function Header({ basketTotal }: Props) {
   return (
     <header className="Header">
       <LockUp />
       <div className="row">
         <CartIcon />
-        <HeaderAmountIcon quant={quant} />
+        <HeaderAmountIcon basketTotal={basketTotal} />
       </div>
     </header>
   );
