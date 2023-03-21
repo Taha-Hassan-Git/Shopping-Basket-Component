@@ -1,6 +1,6 @@
 # soon-takehome
 
-I'm still trouble-shooting why github pages isn't displaying this, but I should have it workign soon. 
+I'm still trouble-shooting why github pages isn't displaying this, but I should have it working soon. In the meantime, cloning the repo and hosting it locally should work fine.
 
 ## About
 
