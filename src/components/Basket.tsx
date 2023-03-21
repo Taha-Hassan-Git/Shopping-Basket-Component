@@ -26,7 +26,7 @@ function Basket({ setBasketTotal, basketTotal }: Props) {
     price: 325,
   };
 
-  const basketItems = [WaxedJacket, CottonSkirt];
+  const basketItems = [WaxedJacket];
 
   const getSubtotal = (number: number) => 300;
 
