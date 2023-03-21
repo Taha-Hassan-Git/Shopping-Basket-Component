@@ -1,12 +1,5 @@
-import ProductImage from "./ProductImage";
-import ProductName from "./ProductName";
-import ProductPrice from "./ProductPrice";
-import ProductQuantity from "./ProductQuantity";
-import ProductTotal from "./ProductTotal";
 import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
-import Product from "./Product";
-import { useState } from "react";
 import BasketItem from "./BasketItem";
 
 interface Props {
