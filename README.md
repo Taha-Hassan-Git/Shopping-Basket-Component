@@ -1,4 +1,7 @@
 # soon-takehome
+
+I'm still trouble-shooting why github pages isn't displaying this, but I should have it workign soon. 
+
 ## About
 
 A take-home challenge for an apprenticeship opportunity with Soon_. I chose User Flow 2: updating the basket. 
