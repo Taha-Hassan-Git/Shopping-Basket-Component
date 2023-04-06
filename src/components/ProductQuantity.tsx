@@ -3,39 +3,14 @@ import Overline from "./Overline";
 
 interface Props {
   CssClass?: string;
-  basketTotal: number;
-  setBasketTotal: (basketTotal: number) => void;
-  quant: number;
-  setQuant: (quant: number) => void;
 }
 
-const ProductQuantity = ({
-  CssClass,
-  setBasketTotal,
-  basketTotal,
-  quant,
-  setQuant,
-}: Props) => {
-  const handleIncrease = () => {
-    setQuant(quant + 1);
-    setBasketTotal(basketTotal + 1);
-  };
-
-  const handleDecrease = () => {
-    if (quant > 0) {
-      setQuant(quant - 1);
-      setBasketTotal(basketTotal - 1);
-    }
-  };
-
+const ProductQuantity = ({ CssClass }: Props) => {
   return (
     <div className={CssClass}>
       <Overline CssClass="Overline" heading="Quantity" />
       <div className="Quantity">
-        <button
-          onClick={handleDecrease}
-          className={`btn btn-quantity ${quant === 0 && "opacity-25"}`}
-        >
+        <button className={`btn btn-quantity ${0 === 0 && "opacity-25"}`}>
           <svg
             width="14"
             height="2"
@@ -46,8 +21,8 @@ const ProductQuantity = ({
             <path d="M14 2H0V0H14V2Z" fill="#3F51B5" />
           </svg>
         </button>
-        <p>{quant}</p>
-        <button onClick={handleIncrease} className="btn btn-quantity plus">
+        <p>{0}</p>
+        <button className="btn btn-quantity plus">
           <svg
             width="14"
             height="14"

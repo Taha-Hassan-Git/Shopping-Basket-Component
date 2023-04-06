@@ -1,12 +1,8 @@
-interface Props {
-  basketTotal: number;
-}
-const HeaderAmountIcon = ({ basketTotal }: Props) => {
+interface Props {}
+const HeaderAmountIcon = () => {
   return (
-    <div
-      className={`AmountIcon ${basketTotal === 0 && "AmountIcon--inactive"}`}
-    >
-      <p className="Amount">{basketTotal}</p>
+    <div className={`AmountIcon ${0 === 0 && "AmountIcon--inactive"}`}>
+      <p className="Amount">{0}</p>
     </div>
   );
 };

@@ -1,14 +1,12 @@
 interface Props {
-  basketTotal: number;
   img: string;
-  quant: number;
 }
-const ProductImage = ({ basketTotal, img, quant }: Props) => {
+const ProductImage = ({ img }: Props) => {
   return (
     <img
       src={img}
       alt=""
-      className={`ProductImage ${quant === 0 && "opacity-25"}`}
+      className={`ProductImage ${0 === 0 && "opacity-25"}`}
     />
   );
 };

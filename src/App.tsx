@@ -3,11 +3,10 @@ import Basket from "./components/Basket";
 import { useState } from "react";
 
 function App() {
-  const [basketTotal, setBasketTotal] = useState(0);
   return (
     <>
-      <Header basketTotal={basketTotal} />
-      <Basket setBasketTotal={setBasketTotal} basketTotal={basketTotal} />
+      <Header />
+      <Basket />
     </>
   );
 }
