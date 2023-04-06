@@ -1,10 +1,13 @@
 import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
 import BasketItem from "./BasketItem";
+import { IBasketItem } from "./types";
 
-interface Props {}
+interface Props {
+  basket: IBasketItem[];
+}
 
-function Basket() {
+function Basket({ basket }: Props) {
   const WaxedJacket = {
     name: "Waxed Cotton Hooded Jacket",
     img: "./src/assets/Jacket.jpg",
@@ -28,11 +31,11 @@ function Basket() {
         ProductPrice/Quantity/Total are rendered in this container 
         on big screens */}
         {basketItems.map((item, index) => (
-          <BasketItem item={item} key={index} />
+          <BasketItem basket={basket} item={item} key={index} />
         ))}
       </main>
       <div className="Checkout">
-        <Subtotal subtotal={getSubtotal(20)} />
+        <Subtotal basket={basket} subtotal={getSubtotal(20)} />
         <CheckoutButton />
       </div>
     </>

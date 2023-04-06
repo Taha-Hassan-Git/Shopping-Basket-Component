@@ -1,16 +1,19 @@
 import CartIcon from "./CartIcon";
 import LockUp from "./LockUp";
 import HeaderAmountIcon from "./HeaderAmountIcon";
+import { IBasketItem } from "./types";
 
-interface Props {}
+interface Props {
+  basket: IBasketItem[];
+}
 
-function Header() {
+function Header({ basket }: Props) {
   return (
     <header className="Header">
       <LockUp />
       <div className="row">
         <CartIcon />
-        <HeaderAmountIcon />
+        <HeaderAmountIcon basket={basket} />
       </div>
     </header>
   );
