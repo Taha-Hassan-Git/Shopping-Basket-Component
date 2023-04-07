@@ -5,9 +5,10 @@ import { IBasketItem } from "./types";
 
 interface Props {
   basket: IBasketItem[];
+  setBasket: React.Dispatch<React.SetStateAction<IBasketItem[]>>;
 }
 
-function Basket({ basket }: Props) {
+function Basket({ basket, setBasket }: Props) {
   const WaxedJacket = {
     name: "Waxed Cotton Hooded Jacket",
     img: "./src/assets/Jacket.jpg",
@@ -31,11 +32,20 @@ function Basket({ basket }: Props) {
         ProductPrice/Quantity/Total are rendered in this container 
         on big screens */}
         {basketItems.map((item, index) => (
-          <BasketItem basket={basket} item={item} key={index} />
+          <BasketItem
+            basket={basket}
+            setBasket={setBasket}
+            item={item}
+            key={index}
+          />
         ))}
       </main>
       <div className="Checkout">
-        <Subtotal basket={basket} subtotal={getSubtotal(20)} />
+        <Subtotal
+          basket={basket}
+          setBasket={setBasket}
+          subtotal={getSubtotal(20)}
+        />
         <CheckoutButton />
       </div>
     </>

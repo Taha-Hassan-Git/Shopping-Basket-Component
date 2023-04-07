@@ -1,10 +1,12 @@
 import Overline from "./Overline";
+import { IBasketItem } from "./types";
 
 interface Props {
   CssClass?: string;
   price: number;
+  basket: IBasketItem[];
 }
-const ProductTotal = ({ CssClass, price }: Props) => {
+const ProductTotal = ({ CssClass, price, basket }: Props) => {
   return (
     <div className={"ProductTotal " + CssClass}>
       <Overline CssClass="Overline" heading="Total" />

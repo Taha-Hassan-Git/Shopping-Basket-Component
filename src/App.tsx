@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header basket={basket} />
-      <Basket basket={basket} />
+      <Basket basket={basket} setBasket={setBasket} />
     </>
   );
 }

@@ -1,11 +1,14 @@
 import { MouseEvent, useState } from "react";
 import Overline from "./Overline";
+import { IBasketItem } from "./types";
 
 interface Props {
+  basket: IBasketItem[];
+  setBasket: React.Dispatch<React.SetStateAction<IBasketItem[]>>;
   CssClass?: string;
 }
 
-const ProductQuantity = ({ CssClass }: Props) => {
+const ProductQuantity = ({ CssClass, basket, setBasket }: Props) => {
   return (
     <div className={CssClass}>
       <Overline CssClass="Overline" heading="Quantity" />
