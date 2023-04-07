@@ -1,19 +1,23 @@
-import { MouseEvent, useState } from "react";
 import Overline from "./Overline";
 import { IBasketItem } from "../types/types";
 
 interface Props {
+  id: number;
   basket: IBasketItem[];
   setBasket: React.Dispatch<React.SetStateAction<IBasketItem[]>>;
   CssClass?: string;
 }
 
-const ProductQuantity = ({ CssClass, basket, setBasket }: Props) => {
+const ProductQuantity = ({ CssClass, basket, setBasket, id }: Props) => {
+  const found = basket.find((product) => product.id === id);
+  const quantity = found?.quantity;
   return (
     <div className={CssClass}>
       <Overline CssClass="Overline" heading="Quantity" />
       <div className="Quantity">
-        <button className={`btn btn-quantity ${0 === 0 && "opacity-25"}`}>
+        <button
+          className={`btn btn-quantity ${quantity === 0 && "opacity-25"}`}
+        >
           <svg
             width="14"
             height="2"
@@ -24,7 +28,7 @@ const ProductQuantity = ({ CssClass, basket, setBasket }: Props) => {
             <path d="M14 2H0V0H14V2Z" fill="#3F51B5" />
           </svg>
         </button>
-        <p>{0}</p>
+        <p>{quantity}</p>
         <button className="btn btn-quantity plus">
           <svg
             width="14"
