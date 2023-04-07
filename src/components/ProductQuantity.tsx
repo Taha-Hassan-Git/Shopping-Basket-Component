@@ -1,6 +1,6 @@
 import { MouseEvent, useState } from "react";
 import Overline from "./Overline";
-import { IBasketItem } from "./types";
+import { IBasketItem } from "../types/types";
 
 interface Props {
   basket: IBasketItem[];

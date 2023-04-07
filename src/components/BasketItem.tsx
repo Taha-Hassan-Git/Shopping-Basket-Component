@@ -2,7 +2,7 @@ import Product from "./Product";
 import ProductPrice from "./ProductPrice";
 import ProductQuantity from "./ProductQuantity";
 import ProductTotal from "./ProductTotal";
-import { IBasketItem } from "./types";
+import { IBasketItem } from "../types/types";
 
 interface Props {
   item: { name: string; img: string; price: number };

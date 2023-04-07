@@ -1,7 +1,7 @@
 import CartIcon from "./CartIcon";
 import LockUp from "./LockUp";
 import HeaderAmountIcon from "./HeaderAmountIcon";
-import { IBasketItem } from "./types";
+import { IBasketItem } from "../types/types";
 
 interface Props {
   basket: IBasketItem[];

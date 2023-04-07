@@ -1,7 +1,8 @@
 import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
 import BasketItem from "./BasketItem";
-import { IBasketItem } from "./types";
+import { IBasketItem } from "../types/types";
+import { WaxedJacket, CottonSkirt } from "../assets/Catalogue";
 
 interface Props {
   basket: IBasketItem[];
@@ -9,17 +10,6 @@ interface Props {
 }
 
 function Basket({ basket, setBasket }: Props) {
-  const WaxedJacket = {
-    name: "Waxed Cotton Hooded Jacket",
-    img: "./src/assets/Jacket.jpg",
-    price: 650,
-  };
-  const CottonSkirt = {
-    name: "Black Cotton Skirt",
-    img: "./src/assets/CottonSkirt.png",
-    price: 325,
-  };
-
   const basketItems = [WaxedJacket, CottonSkirt];
 
   const getSubtotal = (number: number) => 300;
