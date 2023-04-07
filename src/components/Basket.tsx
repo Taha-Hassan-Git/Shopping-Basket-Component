@@ -10,8 +10,6 @@ interface Props {
 }
 
 function Basket({ basket, setBasket }: Props) {
-  const basketItems = [WaxedJacket, CottonSkirt];
-
   const getSubtotal = (number: number) => 300;
 
   return (
@@ -21,7 +19,7 @@ function Basket({ basket, setBasket }: Props) {
         using above-700 and below-700 classNames.
         ProductPrice/Quantity/Total are rendered in this container 
         on big screens */}
-        {basketItems.map((item, index) => (
+        {basket.map((item, index) => (
           <BasketItem
             basket={basket}
             setBasket={setBasket}

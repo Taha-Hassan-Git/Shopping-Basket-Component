@@ -5,7 +5,7 @@ import ProductTotal from "./ProductTotal";
 import { IBasketItem } from "../types/types";
 
 interface Props {
-  item: { name: string; img: string; price: number };
+  item: { id: number; quantity: number };
   basket: IBasketItem[];
   setBasket: React.Dispatch<React.SetStateAction<IBasketItem[]>>;
 }
@@ -14,6 +14,7 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
   return (
     <div className="row BasketItem">
       <div className="ProductContainer">
+        {console.log(item)}
         <Product name={item.name} img={item.img} />
         <ProductPrice price={`£${item.price}.00`} CssClass="above-700" />
         <ProductQuantity
