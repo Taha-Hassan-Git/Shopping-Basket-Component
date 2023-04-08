@@ -4,18 +4,48 @@ import { IBasketItem } from "../types/types";
 interface Props {
   id: number;
   basket: IBasketItem[];
+  item: IBasketItem;
   setBasket: React.Dispatch<React.SetStateAction<IBasketItem[]>>;
   CssClass?: string;
+  quantity: number;
 }
 
-const ProductQuantity = ({ CssClass, basket, setBasket, id }: Props) => {
-  const found = basket.find((product) => product.id === id);
-  const quantity = found?.quantity;
+const ProductQuantity = ({
+  CssClass,
+  basket,
+  setBasket,
+  id,
+  quantity,
+  item,
+}: Props) => {
+  const handleAdd = () => {
+    setBasket((prevBasket) => {
+      return prevBasket.map((itemInBasket) => {
+        if (itemInBasket.id === id) {
+          return { ...itemInBasket, quantity: itemInBasket.quantity + 1 };
+        } else {
+          return itemInBasket;
+        }
+      });
+    });
+  };
+  const handleMinus = () => {
+    setBasket((prevBasket) => {
+      return prevBasket.map((itemInBasket) => {
+        if (itemInBasket.id === id && itemInBasket.quantity > 0) {
+          return { ...itemInBasket, quantity: itemInBasket.quantity - 1 };
+        } else {
+          return itemInBasket;
+        }
+      });
+    });
+  };
   return (
     <div className={CssClass}>
       <Overline CssClass="Overline" heading="Quantity" />
       <div className="Quantity">
         <button
+          onClick={handleMinus}
           className={`btn btn-quantity ${quantity === 0 && "opacity-25"}`}
         >
           <svg
@@ -29,7 +59,7 @@ const ProductQuantity = ({ CssClass, basket, setBasket, id }: Props) => {
           </svg>
         </button>
         <p>{quantity}</p>
-        <button className="btn btn-quantity plus">
+        <button onClick={handleAdd} className="btn btn-quantity plus">
           <svg
             width="14"
             height="14"
