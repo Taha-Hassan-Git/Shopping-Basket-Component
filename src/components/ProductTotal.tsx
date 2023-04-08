@@ -5,12 +5,13 @@ interface Props {
   CssClass?: string;
   price: number;
   quantity: number;
+  total: number;
 }
-const ProductTotal = ({ CssClass, price, quantity }: Props) => {
+const ProductTotal = ({ CssClass, price, quantity, total }: Props) => {
   return (
     <div className={"ProductTotal " + CssClass}>
       <Overline CssClass="Overline" heading="Total" />
-      <p className="total">{`£${quantity * price}.00`}</p>
+      <p className="total">{`£${total}.00`}</p>
     </div>
   );
 };

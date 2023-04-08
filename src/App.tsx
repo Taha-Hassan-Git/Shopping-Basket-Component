@@ -9,8 +9,16 @@ function App() {
 
   useEffect(() => {
     setBasket([
-      { id: catalogue.WaxedJacket.id, quantity: 2 },
-      { id: catalogue.CottonSkirt.id, quantity: 5 },
+      {
+        id: catalogue.WaxedJacket.id,
+        price: catalogue.WaxedJacket.price,
+        quantity: 2,
+      },
+      {
+        id: catalogue.CottonSkirt.id,
+        price: catalogue.CottonSkirt.price,
+        quantity: 5,
+      },
     ]);
   }, []);
 

@@ -2,12 +2,16 @@ import Overline from "./Overline";
 import { IBasketItem } from "../types/types";
 
 interface Props {
-  subtotal: number;
   basket: IBasketItem[];
-  setBasket: React.Dispatch<React.SetStateAction<IBasketItem[]>>;
 }
 
-const Subtotal = ({ subtotal, basket, setBasket }: Props) => {
+const Subtotal = ({ basket }: Props) => {
+  const subtotal = basket.reduce(
+    (total: number, currentProduct: IBasketItem) => {
+      return total + currentProduct.quantity * currentProduct.price;
+    },
+    0
+  );
   return (
     <div className="Subtotal">
       <Overline CssClass="Overline Overline-subtotal" heading="Subtotal:" />

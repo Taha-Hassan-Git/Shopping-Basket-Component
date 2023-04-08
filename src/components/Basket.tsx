@@ -14,10 +14,6 @@ function Basket({ basket, setBasket }: Props) {
   return (
     <>
       <main className="Basket">
-        {/* CSS classes are used to hide/display components,
-        using above-700 and below-700 classNames.
-        ProductPrice/Quantity/Total are rendered in this container 
-        on big screens */}
         {basket.map((item, index) => (
           <BasketItem
             basket={basket}
@@ -28,11 +24,7 @@ function Basket({ basket, setBasket }: Props) {
         ))}
       </main>
       <div className="Checkout">
-        <Subtotal
-          basket={basket}
-          setBasket={setBasket}
-          subtotal={getSubtotal(20)}
-        />
+        <Subtotal basket={basket} />
         <CheckoutButton />
       </div>
     </>

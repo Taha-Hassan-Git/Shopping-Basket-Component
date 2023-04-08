@@ -20,12 +20,14 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
   }
   let quantity = item.quantity;
   return (
+    //CSS classes are used to hide/display components depending on screen size,
+    //using above-700 and below-700 classNames.
     <div className="row BasketItem">
       <div className="ProductContainer">
         <Product quantity={quantity} name={product.name} img={product.img} />
         <ProductPrice
           quantity={quantity}
-          price={`£${product.price}.00`}
+          price={`£${item.price}.00`}
           CssClass="above-700"
         />
         <ProductQuantity
@@ -39,11 +41,12 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
         <ProductTotal
           quantity={quantity}
           price={product.price}
+          total={quantity * item.price}
           CssClass="above-700"
         />
       </div>
       <div className="below-700 TotalContainer">
-        <ProductPrice quantity={quantity} price={`£${product.price}.00`} />
+        <ProductPrice quantity={quantity} price={`£${item.price}.00`} />
         <ProductQuantity
           item={item}
           quantity={quantity}
@@ -51,7 +54,11 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
           basket={basket}
           setBasket={setBasket}
         />
-        <ProductTotal basket={basket} price={product.price} />
+        <ProductTotal
+          total={quantity * item.price}
+          quantity={quantity}
+          price={product.price}
+        />
       </div>
     </div>
   );
