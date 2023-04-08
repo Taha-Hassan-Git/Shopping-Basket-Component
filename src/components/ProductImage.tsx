@@ -1,12 +1,13 @@
 interface Props {
   img: string;
+  quantity: number;
 }
-const ProductImage = ({ img }: Props) => {
+const ProductImage = ({ img, quantity }: Props) => {
   return (
     <img
       src={img}
       alt=""
-      className={`ProductImage ${0 === 0 && "opacity-25"}`}
+      className={`ProductImage ${quantity === 0 && "opacity-25"}`}
     />
   );
 };
