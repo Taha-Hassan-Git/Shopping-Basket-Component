@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Basket from "./components/Basket";
 import { useEffect, useState } from "react";
 import { IBasketItem, IProduct } from "./types/types";
-import { catalogue } from "./assets/catalogue";
+import { catalogue } from "../public/assets/catalogue";
 
 function App() {
   const [basket, setBasket] = useState<IBasketItem[]>([]);
