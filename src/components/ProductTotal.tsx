@@ -4,13 +4,13 @@ import { IBasketItem } from "../types/types";
 interface Props {
   CssClass?: string;
   price: number;
-  basket: IBasketItem[];
+  quantity: number;
 }
-const ProductTotal = ({ CssClass, price, basket }: Props) => {
+const ProductTotal = ({ CssClass, price, quantity }: Props) => {
   return (
     <div className={"ProductTotal " + CssClass}>
       <Overline CssClass="Overline" heading="Total" />
-      <p className="total">{`£${0 * price}.00`}</p>
+      <p className="total">{`£${quantity * price}.00`}</p>
     </div>
   );
 };

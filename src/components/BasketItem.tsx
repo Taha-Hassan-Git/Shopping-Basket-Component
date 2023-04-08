@@ -37,7 +37,7 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
           CssClass="above-700"
         />
         <ProductTotal
-          basket={basket}
+          quantity={quantity}
           price={product.price}
           CssClass="above-700"
         />

@@ -1,4 +1,3 @@
-import { IBasketItem } from "../types/types";
 import Overline from "./Overline";
 import ProductImage from "./ProductImage";
 import ProductName from "./ProductName";
