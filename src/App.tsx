@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import Basket from "./components/Basket";
+import Header from "./components/Header/Header";
+import Basket from "./components/Basket/Basket";
 import { useEffect, useState } from "react";
 import { IBasketItem, IProduct } from "./types/types";
 import { catalogue } from "../public/assets/catalogue";

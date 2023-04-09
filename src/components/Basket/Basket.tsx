@@ -1,7 +1,7 @@
 import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
 import BasketItem from "./BasketItem";
-import { IBasketItem } from "../types/types";
+import { IBasketItem } from "../../types/types";
 
 interface Props {
   basket: IBasketItem[];

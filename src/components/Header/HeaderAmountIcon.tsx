@@ -1,4 +1,4 @@
-import { IBasketItem } from "../types/types";
+import { IBasketItem } from "../../types/types";
 
 interface Props {
   basket: IBasketItem[];

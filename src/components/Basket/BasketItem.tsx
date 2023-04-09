@@ -2,8 +2,8 @@ import Product from "./Product";
 import ProductPrice from "./ProductPrice";
 import ProductQuantity from "./ProductQuantity";
 import ProductTotal from "./ProductTotal";
-import { IBasketItem, IProduct } from "../types/types";
-import { catalogue } from "../../public/assets/catalogue";
+import { IBasketItem, IProduct } from "../../types/types";
+import { catalogue } from "../../../public/assets/catalogue";
 
 interface Props {
   item: IBasketItem;
