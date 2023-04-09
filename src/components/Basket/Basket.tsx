@@ -2,6 +2,7 @@ import Subtotal from "./Subtotal";
 import CheckoutButton from "./CheckoutButton";
 import BasketItem from "./BasketItem";
 import { IBasketItem } from "../../types/types";
+import "../../styles/basket.css";
 
 interface Props {
   basket: IBasketItem[];

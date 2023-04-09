@@ -1,0 +1,45 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(185, 185, 185);
+  }
+  .Lockup{
+    display: flex;
+    gap: 0.5rem
+  }
+  .AmountIcon{
+    color: white;
+    height: 24px;
+    width: 24px;
+    font-size: 10px;
+    align-self: center;
+    text-align: center;
+    background-color: var(--primary-2);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .AmountIcon--inactive{
+    background-color: var(--shade-1);
+  }
+    .Amount{
+      margin: 0;
+      line-height: 24px;
+    }
+  
+  .logos{
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .Soon{
+    color: var(--shade-1);
+  }
+
+@media only screen and (min-width: 755px) {
+    .Header{
+      margin-top: 2rem;
+      padding-bottom: 0.5rem;
+    }
+}
