@@ -1,13 +1,15 @@
 import Header from "./components/Header/Header";
 import Basket from "./components/Basket/Basket";
 import { useEffect, useState } from "react";
-import { IBasketItem, IProduct } from "./types/types";
+import { IBasketItem } from "./types/types";
 import { catalogue } from "../public/assets/catalogue";
 
 function App() {
   const [basket, setBasket] = useState<IBasketItem[]>([]);
 
   useEffect(() => {
+    //Useeffect adds items to the basket in order to demo the component
+    //in a real application it would be added via a button in the store
     setBasket([
       {
         id: catalogue.WaxedJacket.id,

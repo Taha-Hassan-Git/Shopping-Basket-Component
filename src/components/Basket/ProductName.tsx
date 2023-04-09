@@ -1,6 +1,3 @@
-import { IBasketItem } from "../../types/types";
-import Overline from "./Overline";
-
 interface Props {
   quantity: number;
   name: string;

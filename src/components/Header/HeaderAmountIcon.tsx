@@ -1,5 +1,3 @@
-import { IBasketItem } from "../../types/types";
-
 interface Props {
   totalItems: number;
 }
