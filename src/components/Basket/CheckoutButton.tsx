@@ -1,9 +1,13 @@
-interface Props {}
+interface Props {
+  totalItems: number;
+}
 
-const CheckoutButton = () => {
+const CheckoutButton = ({ totalItems }: Props) => {
   return (
     <button
-      className={`btn CheckoutButton ${0 === 0 && "CheckoutButton--inactive"}`}
+      className={`basket--checkoutbtn ${
+        totalItems === 0 && "basket--checkoutbtn__inactive"
+      }`}
     >
       Go To Checkout
     </button>

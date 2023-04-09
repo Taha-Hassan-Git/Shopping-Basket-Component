@@ -7,9 +7,10 @@ import "../../styles/basket.css";
 interface Props {
   basket: IBasketItem[];
   setBasket: React.Dispatch<React.SetStateAction<IBasketItem[]>>;
+  totalItems: number;
 }
 
-function Basket({ basket, setBasket }: Props) {
+function Basket({ basket, setBasket, totalItems }: Props) {
   return (
     <>
       <main className="basket">
@@ -24,7 +25,7 @@ function Basket({ basket, setBasket }: Props) {
       </main>
       <div className="basket--checkoutcontainer">
         <Subtotal basket={basket} />
-        <CheckoutButton />
+        <CheckoutButton totalItems={totalItems} />
       </div>
     </>
   );

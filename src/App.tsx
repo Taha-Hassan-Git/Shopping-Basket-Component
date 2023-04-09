@@ -22,10 +22,16 @@ function App() {
     ]);
   }, []);
 
+  function getTotalQuantity(basket: IBasketItem[]): number {
+    return basket.reduce((total, currentProduct) => {
+      return total + currentProduct.quantity;
+    }, 0);
+  }
+  const totalItems = getTotalQuantity(basket);
   return (
     <div className="app">
-      <Header basket={basket} />
-      <Basket basket={basket} setBasket={setBasket} />
+      <Header totalItems={totalItems} />
+      <Basket totalItems={totalItems} basket={basket} setBasket={setBasket} />
     </div>
   );
 }

@@ -5,16 +5,16 @@ import { IBasketItem } from "../../types/types";
 import "../../styles/header.css";
 
 interface Props {
-  basket: IBasketItem[];
+  totalItems: number;
 }
 
-function Header({ basket }: Props) {
+function Header({ totalItems }: Props) {
   return (
     <header className="header">
       <LockUp />
       <div className="row">
         <CartIcon />
-        <HeaderAmountIcon basket={basket} />
+        <HeaderAmountIcon totalItems={totalItems} />
       </div>
     </header>
   );

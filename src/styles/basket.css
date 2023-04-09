@@ -108,11 +108,11 @@
         text-align: center;
       }
   .basketitem--overline{
-    margin-top: 48px;
-    margin-bottom: 48px
+    margin-top: 25px;
+    margin-bottom: 25px
   }
   .basketitem--overline__subtotal{
-    margin-top: 48px;
+    margin-top: 25px;
     margin-bottom: 20px;
   }
   .basketitem--nameimagewrapper{
