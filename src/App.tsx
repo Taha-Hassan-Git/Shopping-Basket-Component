@@ -17,16 +17,16 @@ function App() {
       {
         id: catalogue.CottonSkirt.id,
         price: catalogue.CottonSkirt.price,
-        quantity: 5,
+        quantity: 1,
       },
     ]);
   }, []);
 
   return (
-    <>
+    <div className="app">
       <Header basket={basket} />
       <Basket basket={basket} setBasket={setBasket} />
-    </>
+    </div>
   );
 }
 

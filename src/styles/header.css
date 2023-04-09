@@ -37,7 +37,7 @@
     color: var(--shade-1);
   }
 
-@media only screen and (min-width: 755px) {
+@media only screen and (min-width: 700px) {
     .header{
       margin-top: 2rem;
       padding-bottom: 0.5rem;
