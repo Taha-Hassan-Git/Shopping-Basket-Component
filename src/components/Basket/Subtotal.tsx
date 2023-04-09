@@ -13,7 +13,7 @@ const Subtotal = ({ basket }: Props) => {
     0
   );
   return (
-    <div className="Subtotal">
+    <div className="basket--subtotal">
       <Overline
         CssClass="basketitem--overline basketitem--overline__subtotal"
         heading="Subtotal:"
