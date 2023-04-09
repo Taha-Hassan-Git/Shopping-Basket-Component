@@ -38,12 +38,7 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
           setBasket={setBasket}
           CssClass="above-700"
         />
-        <ProductTotal
-          quantity={quantity}
-          price={product.price}
-          total={quantity * item.price}
-          CssClass="above-700"
-        />
+        <ProductTotal total={quantity * item.price} CssClass="above-700" />
       </div>
       <div className="below-700 basketitem--totalcontainer">
         <ProductPrice quantity={quantity} price={`£${item.price}.00`} />
@@ -54,11 +49,7 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
           basket={basket}
           setBasket={setBasket}
         />
-        <ProductTotal
-          total={quantity * item.price}
-          quantity={quantity}
-          price={product.price}
-        />
+        <ProductTotal total={quantity * item.price} />
       </div>
     </div>
   );
