@@ -10,11 +10,9 @@ interface Props {
 }
 
 function Basket({ basket, setBasket }: Props) {
-  const getSubtotal = (number: number) => 300;
-
   return (
     <>
-      <main className="Basket">
+      <main className="basket">
         {basket.map((item, index) => (
           <BasketItem
             basket={basket}
@@ -24,7 +22,7 @@ function Basket({ basket, setBasket }: Props) {
           />
         ))}
       </main>
-      <div className="Checkout">
+      <div className="basket--checkoutcontainer">
         <Subtotal basket={basket} />
         <CheckoutButton />
       </div>

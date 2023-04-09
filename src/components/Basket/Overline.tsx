@@ -1,6 +1,8 @@
 interface Props {
   heading: string;
-  CssClass: "Overline" | "Overline Overline-subtotal";
+  CssClass:
+    | "basketitem--overline"
+    | "basketitem--overline basketitem--overline__subtotal";
 }
 
 const Overline = ({ heading, CssClass }: Props) => {

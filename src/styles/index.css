@@ -53,10 +53,10 @@ body{
 
 
 @media only screen and (max-width: 755px) {
-.Overline{
+.basketitem--overline{
   text-align: center;
 }
-.Quantity{
+.basketitem--quantity{
   gap: 1rem;
 }
 }

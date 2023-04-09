@@ -1,13 +1,13 @@
-.Header{
+.header{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(185, 185, 185);
   }
-  .Lockup{
+  .header--lockup{
     display: flex;
     gap: 0.5rem
   }
-  .AmountIcon{
+  .header--amounticon{
     color: white;
     height: 24px;
     width: 24px;
@@ -21,24 +21,24 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
   }
-  .AmountIcon--inactive{
+  .header--amounticon__inactive{
     background-color: var(--shade-1);
   }
-    .Amount{
+    .header--amounticon--amount{
       margin: 0;
       line-height: 24px;
     }
   
-  .logos{
+  .header--logos{
     font-size: 24px;
     font-weight: 300;
   }
-  .Soon{
+  .header--logos__soon{
     color: var(--shade-1);
   }
 
 @media only screen and (min-width: 755px) {
-    .Header{
+    .header{
       margin-top: 2rem;
       padding-bottom: 0.5rem;
     }

@@ -12,11 +12,11 @@ function getTotalQuantity(basket: IBasketItem[]): number {
 const HeaderAmountIcon = ({ basket }: Props) => {
   return (
     <div
-      className={`AmountIcon ${
-        getTotalQuantity(basket) === 0 && "AmountIcon--inactive"
+      className={`header--amounticon ${
+        getTotalQuantity(basket) === 0 && "header--amounticon__inactive"
       }`}
     >
-      <p className="Amount">{getTotalQuantity(basket)}</p>
+      <p className="header--amounticon--amount">{getTotalQuantity(basket)}</p>
     </div>
   );
 };

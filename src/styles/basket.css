@@ -1,49 +1,45 @@
-.Basket{
+.basket{
     display: flex;
     flex-direction: column;
-    
-  
-  }
-  .BasketItem{
+}
+.basketitem{
     border-bottom: 1px solid rgb(185, 185, 185);
   }
-  .Overline{
+  .basketitem--overline{
     font-weight: 400;
     font-size: 10px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--shade-1);
   }
-  .ProductContainer{
+  .basketitem--productcontainer{
     width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  .ProductNameBox{
+  .basketitem--productnamebox{
     width: max-content;
   }
   
-  .ProductImage{
+  .basketitem--productimage{
     max-width: 200px;
   }
-  .TotalContainer{
+  .basketitem--totalcontainer{
     width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  .btn{
-  }
-  .Quantity{
+  .basketitem--quantity{
     display: flex;
     gap: 1rem;
     justify-content: center;
     align-items: center;
   }
-  .btn-quantity{
+  .basketitem--btn-quantity{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -57,8 +53,13 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
   }
+
+.basket--checkoutcontainer{
+    float: right;
+    margin-right: 1rem;
+}
   
-  .CheckoutButton{
+.basket--checkoutbtn{
     display: flex;
     align-items: center;
     padding: 10px 21px;
@@ -77,29 +78,21 @@
     -ms-border-radius: 48px;
     -o-border-radius: 48px;
   }
-  .CheckoutButton--inactive{
+  .basket--checkoutbtn__inactive{
     background-color: var(--shade-1);
     color: gray;
   }
-  
-  .Checkout{
-    float: right;
-    margin-right: 1rem;
-  }
-
-  
-
 
 
 
 @media only screen and (min-width: 755px) {
-  .Basket{
+  .basket{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
   }
-  .ProductContainer{
+  .basketitem--productcontainer{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -107,40 +100,39 @@
     justify-content: space-between; 
   }
       /* setting width of children */
-      .ProductContainer > div{
+      .basketitem--productcontainer > div{
         flex: 1 0 14%;
       }
       /*Product overline needs to be left aligned*/
-      .ProductContainer *:not(:first-child){
+      .basketitem--productcontainer *:not(:first-child){
         text-align: center;
       }
-  .Overline{
+  .basketitem--overline{
     margin-top: 48px;
     margin-bottom: 48px
   }
-  .Overline-subtotal{
+  .basketitem--overline__subtotal{
     margin-top: 48px;
     margin-bottom: 20px;
   }
-  .NameImageWrapper{
-  
+  .basketitem--nameimagewrapper{
     gap: 3rem;
   }
-  .ProductImage{
+  .basketitem--productimage{
     width: auto;
   }
-  .TotalContainer{
+  .basketitem--totalcontainer{
     width: 50%;
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .price{
+  .basketitem--price{
     margin-top: 66px
   }
-  .total{
+  .basketitem--total{
     margin-top: 66px;
   }
-  .ProductName{
+  .basketitem--productname{
     margin-top: 18px;
   }
 }

@@ -9,9 +9,11 @@ interface Props {
 
 const ProductPrice = ({ price, CssClass, quantity }: Props) => {
   return (
-    <div className={"ProductPrice " + CssClass}>
-      <Overline CssClass="Overline" heading="Price" />
-      <p className={`price ${quantity === 0 && "opacity-25"}`}>{price}</p>
+    <div className={CssClass}>
+      <Overline CssClass="basketitem--overline" heading="Price" />
+      <p className={`basketitem--price ${quantity === 0 && "opacity-25"}`}>
+        {price}
+      </p>
     </div>
   );
 };

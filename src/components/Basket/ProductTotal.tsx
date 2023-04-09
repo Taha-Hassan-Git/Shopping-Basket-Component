@@ -9,9 +9,9 @@ interface Props {
 }
 const ProductTotal = ({ CssClass, price, quantity, total }: Props) => {
   return (
-    <div className={"ProductTotal " + CssClass}>
-      <Overline CssClass="Overline" heading="Total" />
-      <p className="total">{`£${total}.00`}</p>
+    <div className={CssClass}>
+      <Overline CssClass="basketitem--overline" heading="Total" />
+      <p className="basketitem--total">{`£${total}.00`}</p>
     </div>
   );
 };

@@ -14,8 +14,11 @@ const Subtotal = ({ basket }: Props) => {
   );
   return (
     <div className="Subtotal">
-      <Overline CssClass="Overline Overline-subtotal" heading="Subtotal:" />
-      <p className="Subtotal">{`£${subtotal}.00`}</p>
+      <Overline
+        CssClass="basketitem--overline basketitem--overline__subtotal"
+        heading="Subtotal:"
+      />
+      <p>{`£${subtotal}.00`}</p>
     </div>
   );
 };

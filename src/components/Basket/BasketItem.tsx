@@ -2,7 +2,7 @@ import Product from "./Product";
 import ProductPrice from "./ProductPrice";
 import ProductQuantity from "./ProductQuantity";
 import ProductTotal from "./ProductTotal";
-import { IBasketItem, IProduct } from "../../types/types";
+import { IBasketItem } from "../../types/types";
 import { catalogue } from "../../../public/assets/catalogue";
 
 interface Props {
@@ -22,8 +22,8 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
   return (
     //CSS classes are used to hide/display components depending on screen size,
     //using above-700 and below-700 classNames.
-    <div className="row BasketItem">
-      <div className="ProductContainer">
+    <div className="row basketitem">
+      <div className="basketitem--productcontainer">
         <Product quantity={quantity} name={product.name} img={product.img} />
         <ProductPrice
           quantity={quantity}
@@ -45,7 +45,7 @@ const BasketItem = ({ item, basket, setBasket }: Props) => {
           CssClass="above-700"
         />
       </div>
-      <div className="below-700 TotalContainer">
+      <div className="below-700 basketitem--totalcontainer">
         <ProductPrice quantity={quantity} price={`£${item.price}.00`} />
         <ProductQuantity
           item={item}

@@ -7,7 +7,7 @@ const ProductImage = ({ img, quantity }: Props) => {
     <img
       src={img}
       alt=""
-      className={`ProductImage ${quantity === 0 && "opacity-25"}`}
+      className={`basketitem--productimage ${quantity === 0 && "opacity-25"}`}
     />
   );
 };

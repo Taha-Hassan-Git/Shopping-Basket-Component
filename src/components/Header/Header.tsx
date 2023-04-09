@@ -10,7 +10,7 @@ interface Props {
 
 function Header({ basket }: Props) {
   return (
-    <header className="Header">
+    <header className="header">
       <LockUp />
       <div className="row">
         <CartIcon />

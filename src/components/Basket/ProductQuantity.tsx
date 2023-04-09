@@ -10,14 +10,7 @@ interface Props {
   quantity: number;
 }
 
-const ProductQuantity = ({
-  CssClass,
-  basket,
-  setBasket,
-  id,
-  quantity,
-  item,
-}: Props) => {
+const ProductQuantity = ({ CssClass, setBasket, id, quantity }: Props) => {
   const handleAdd = () => {
     setBasket((prevBasket) => {
       return prevBasket.map((itemInBasket) => {
@@ -42,11 +35,13 @@ const ProductQuantity = ({
   };
   return (
     <div className={CssClass}>
-      <Overline CssClass="Overline" heading="Quantity" />
-      <div className="Quantity">
+      <Overline CssClass="basketitem--overline" heading="Quantity" />
+      <div className="basketitem--quantity">
         <button
           onClick={handleMinus}
-          className={`btn btn-quantity ${quantity === 0 && "opacity-25"}`}
+          className={`basketitem--btn-quantity ${
+            quantity === 0 && "opacity-25"
+          }`}
         >
           <svg
             width="14"
@@ -59,7 +54,7 @@ const ProductQuantity = ({
           </svg>
         </button>
         <p>{quantity}</p>
-        <button onClick={handleAdd} className="btn btn-quantity plus">
+        <button onClick={handleAdd} className="basketitem--btn-quantity">
           <svg
             width="14"
             height="14"

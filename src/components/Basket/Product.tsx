@@ -11,8 +11,8 @@ interface Props {
 const Product = ({ name, img, quantity }: Props) => {
   return (
     <div className="text-align-start">
-      <Overline CssClass="Overline" heading="Product" />
-      <div className="NameImageWrapper">
+      <Overline CssClass="basketitem--overline" heading="Product" />
+      <div className="basketitem--nameimagewrapper">
         <ProductName quantity={quantity} name={name} />
         <ProductImage quantity={quantity} img={img} />
       </div>

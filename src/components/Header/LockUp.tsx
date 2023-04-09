@@ -1,8 +1,8 @@
 const LockUp = () => {
   return (
-    <div className="Lockup">
-      <h1 className="logos Soon">Le Trout</h1>
-      <h1 className="logos challenge">Basket App</h1>
+    <div className="header--lockup">
+      <h1 className="header--logos header--logos__soon">Le Trout</h1>
+      <h1 className="header--logos">Basket App</h1>
     </div>
   );
 };
