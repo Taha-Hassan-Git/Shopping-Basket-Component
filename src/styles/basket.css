@@ -30,7 +30,7 @@
   }
   
   .basketitem--productimage{
-    max-width: 130px;
+    max-width: 120px;
   }
   .basketitem--totalcontainer{
     width: 50%;
@@ -116,15 +116,15 @@
         text-align: center;
       }
   .basketitem--overline{
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 25px
   }
   .basketitem--overline__subtotal{
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 20px;
   }
   .basketitem--nameimagewrapper{
-    gap: 3rem;
+    gap: 0.5rem;
   }
   .basketitem--productimage{
     width: auto;
